@@ -1,0 +1,84 @@
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Liên kết "Chuyển đến nội dung chính" */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* Header + Điều hướng sử dụng flex */
+  header {
+    background-color: #003366;
+    padding: 16px;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s ease;
+  }
+  nav a:hover {
+    background: #0055aa;
+    border-radius: 8px;
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+  }
+  
+  /* Grid layout */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Box model styling for images */
+  .image-grid img {
+    width: 100%;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    background: white;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect on images */
+  .image-grid img:hover {
+    transform: scale(1.05);
+    border-color: #003366;
+  }
+  
+  /* nth-child example: áp dụng border-radius khác nhau */
+  .image-grid img:nth-child(even) {
+    border-radius: 50%;
+  }
+  
